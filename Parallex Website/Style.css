@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url(Poppins/Poppins-Regular.ttf);
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    height: 100%;
+    z-index: -1;
+}
+
+.background, .foreground{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.background{
+
+    transform: translateZ(-40px) scale(5);
+}
+
+.foreground{
+
+    transform: translateZ(-20px) scale(3);
+}
+
+h1{
+    position: absolute;
+    font-size: 10rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 5rem 0;
+}
+
+.biking{
+    background-image: url(sport-1.jpg);
+}
+
+.paragliding{
+    background-image: url(sport-2.jpg);
+}
+
+.surfing{
+    background-image: url(sport-3.jpg);
+}
+
+.secHeading{
+    font-size: 3rem;
+    padding: 0 3rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.textPara{
+    font-size: 1.1rem;
+    padding: 0 3rem;
+    margin: 3rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.background1{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.desc{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2rem;
+    top:44%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
