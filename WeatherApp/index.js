@@ -12,7 +12,7 @@ const grantAccessButton = document.querySelector('.grantAccessButton');
 const searchInput = document.querySelector("[data-searchInput]");
 
 let oldTab = userTab;
-const apiKey = 'c2bf3da1e88732ba4ddc266d616b0d27';
+const apiKey = '';
 oldTab.classList.add("current-Tab");
 getFromSessionStorage();
 
