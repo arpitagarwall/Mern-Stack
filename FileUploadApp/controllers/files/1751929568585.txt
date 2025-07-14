@@ -1,0 +1,219 @@
+1. What is React?
+React is a JavaScript library for building user interfaces, mainly used for single-page applications. It enables developers to build reusable UI components and handle the view layer efficiently.
+
+2. What are components in React?
+Components are the building blocks of a React application. There are two main types:
+
+Functional Components
+
+Class Components
+
+3. What is JSX?
+JSX (JavaScript XML) allows you to write HTML inside JavaScript. It helps in writing cleaner and more understandable UI code.
+
+4. What is the Virtual DOM?
+The Virtual DOM is a lightweight copy of the real DOM. React uses it to determine what changes are needed before updating the real DOM, improving performance.
+
+5. Explain React component lifecycle.
+React components go through:
+
+Mounting
+
+Updating
+
+Unmounting
+Key lifecycle methods: componentDidMount, componentDidUpdate, componentWillUnmount.
+
+6. What is a hook in React?
+Hooks are functions that let you use state and other React features in functional components. Examples include useState, useEffect, useRef.
+
+7. What is useState?
+A hook that lets you add state to functional components.
+
+js
+Copy
+Edit
+const [count, setCount] = useState(0);
+8. What is useEffect?
+A hook used to perform side effects (data fetching, subscriptions).
+
+js
+Copy
+Edit
+useEffect(() => { fetchData(); }, []);
+9. Difference between controlled and uncontrolled components?
+Controlled: Form data is managed by React state.
+
+Uncontrolled: Form data is handled by the DOM using refs.
+
+10. What is prop drilling?
+Passing props through many nested components. It can be avoided using the Context API.
+
+11. What is Context API?
+It allows you to share state across components without prop drilling.
+
+12. Why are keys used in lists?
+Keys help React identify which items changed, are added, or removed.
+
+13. useEffect vs useLayoutEffect?
+useEffect: runs after render.
+
+useLayoutEffect: runs synchronously after all DOM mutations.
+
+14. What are React Fragments?
+They let you group children without adding extra nodes to the DOM:
+
+js
+Copy
+Edit
+<></>
+15. What are Higher Order Components (HOC)?
+Functions that take a component and return an enhanced component.
+
+16. Difference between props and state?
+Props: Passed by parent, read-only.
+
+State: Managed by the component, can change.
+
+17. How does React handle forms?
+Using controlled components where form input value is tied to state.
+
+18. What is reconciliation in React?
+Process of updating the DOM efficiently by comparing virtual DOM versions.
+
+19. How are events handled in React?
+React uses camelCase and JSX syntax:
+
+js
+Copy
+Edit
+<button onClick={handleClick}>Click</button>
+20. What are synthetic events?
+React’s wrapper around native events for cross-browser compatibility.
+
+21. What is useRef?
+Hook for referencing DOM elements or keeping a mutable value.
+
+22. What is memoization in React?
+Caching results to avoid expensive re-computation using useMemo.
+
+23. What is React.memo?
+HOC to prevent unnecessary re-renders if props don’t change.
+
+24. What is useMemo?
+Returns a memoized value to optimize performance.
+
+25. What is useCallback?
+Returns a memoized version of a callback function.
+
+26. What is lazy loading?
+Defers loading components until they're needed:
+
+js
+Copy
+Edit
+const LazyComponent = React.lazy(() => import('./Component'));
+27. How do you implement routing in React?
+Using react-router-dom:
+
+js
+Copy
+Edit
+<BrowserRouter><Routes><Route path="/" element={<Home />} /></Routes></BrowserRouter>
+28. What is a render prop?
+A function passed as a prop that returns JSX.
+
+29. componentDidMount vs useEffect?
+componentDidMount: Class-based
+
+useEffect: Functional components
+
+30. What is Redux?
+A state management library for predictable state across large apps.
+
+31. Redux core concepts?
+Store
+
+Actions
+
+Reducers
+
+Dispatch
+
+Selectors
+
+32. What is middleware in Redux?
+A function that sits between dispatching an action and the reducer.
+
+33. What is redux-thunk?
+A middleware that allows you to write async logic in Redux.
+
+34. What is useSelector and useDispatch?
+useSelector: read Redux state
+
+useDispatch: dispatch actions
+
+35. What is React Query?
+A library for data fetching and caching.
+
+36. What is Server-Side Rendering (SSR)?
+Rendering React components on the server before sending them to the client.
+
+37. What is hydration?
+React attaching event listeners to server-rendered HTML.
+
+38. What is StrictMode?
+A wrapper to highlight potential problems in the application.
+
+39. What are portals?
+Allow rendering children into a DOM node outside the parent component.
+
+40. Difference between class and className in JSX?
+Use className because class is a reserved word in JavaScript.
+
+41. What is lifting state up?
+Moving shared state to a common parent component.
+
+42. What is the reconciliation algorithm?
+React’s diffing algorithm that updates the DOM based on changes in virtual DOM.
+
+43. What are error boundaries?
+Components that catch JavaScript errors in child components.
+
+44. What is PureComponent?
+A class component that implements shallow prop/state comparison to avoid unnecessary renders.
+
+45. What is Suspense in React?
+Used for handling lazy-loaded components and async rendering.
+
+46. Difference between <React.Fragment> and <>?
+Both are used to group children. <> is shorthand.
+
+47. What is useImperativeHandle?
+Customizes the instance value exposed when using ref.
+
+48. How to optimize performance in React?
+Use React.memo, useMemo, useCallback, lazy loading, and code-splitting.
+
+49. What is a Promise in JavaScript?
+A Promise represents the eventual completion (or failure) of an asynchronous operation.
+
+js
+Copy
+Edit
+const promise = new Promise((resolve, reject) => {
+  // async task
+});
+50. How to use Promises in React?
+Use inside useEffect or async functions.
+
+js
+Copy
+Edit
+useEffect(() => {
+  fetchData().then(data => setData(data));
+}, []);
+
+
+
+
